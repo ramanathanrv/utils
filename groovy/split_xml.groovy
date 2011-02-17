@@ -4,8 +4,8 @@
 
 import javax.xml.stream.*
 
-pieces = 10
-input = "SchemeMaster.xml"
+pieces = args.size() > 1 ? args[1].toInteger() : 10
+input = args[0]
 output = "output_%04d.xml"
 eventFactory = XMLEventFactory.newInstance()
 fileNumber = elementCount = 0
